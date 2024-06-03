@@ -52,6 +52,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="28dp">
+            <!-- Tüm içeriği dikey olarak hizalayan bir LinearLayout. -->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -60,48 +61,59 @@
                 android:textColor="@color/my_primary"
                 android:textSize="32sp"
                 android:textStyle="bold"/>
+            <!-- Kullanıcıya sayfanın amacını belirten başlık. -->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lütfen giriş yapınız"
                 android:alpha="0.7"/>
+            <!-- Kullanıcıya giriş yapmasını isteyen açıklama metni. -->
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"/>
+            <!-- Boşluk eklemek için kullanılan View. -->
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Email Adresi Giriniz"
                 android:alpha="0.7"
                 android:textStyle="bold"/>
+            <!-- Email adresi girmesini isteyen açıklama metni. -->
 
             <EditText
+                android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableEnd="@drawable/done_icon"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"/>
+            <!-- Kullanıcıdan email almak için EditText. -->
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"/>
+            <!-- Boşluk eklemek için kullanılan View. -->
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Şifrenizi Giriniz"
                 android:alpha="0.7"
                 android:textStyle="bold"/>
+            <!-- Şifre girmesini isteyen açıklama metni. -->
 
             <EditText
+                android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:drawableEnd="@drawable/password_icon"/>
+                android:inputType="textPassword"/>
+            <!-- Kullanıcıdan şifre almak için EditText. -->
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+                <!-- Şifreyi hatırlatma ve şifremi unuttum seçeneğini hizalayan RelativeLayout. -->
 
                 <CheckBox
                     android:layout_width="wrap_content"
@@ -109,6 +121,7 @@
                     android:text="Beni hatırla"
                     android:layout_centerVertical="true"
                     android:alpha="0.7"/>
+                <!-- Kullanıcıya şifreyi hatırlama seçeneği sunan CheckBox. -->
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -116,18 +129,21 @@
                     android:text="Şifremi unuttum"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"/>
+                <!-- Şifremi unuttum seçeneği. -->
 
             </RelativeLayout>
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="10dp" />
+                android:layout_height="10dp"/>
+            <!-- Boşluk eklemek için kullanılan View. -->
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center">
+                <!-- Kayıt ol ve giriş yap butonlarını yatay hizalayan LinearLayout. -->
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_kayit"
@@ -137,47 +153,58 @@
                     android:text="Kayıt Ol"
                     app:cornerRadius="32dp"
                     android:layout_marginStart="5dp"/>
+                <!-- Kayıt ol butonu. -->
 
                 <View
                     android:layout_width="10dp"
                     android:layout_height="match_parent">
                 </View>
+                <!-- Boşluk eklemek için kullanılan View. -->
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_login"
                     android:layout_width="0dp"
                     android:layout_height="60dp"
                     android:layout_weight="1"
                     android:text="Giriş Yap"
                     app:cornerRadius="32dp"
                     android:layout_marginEnd="5dp"/>
+                <!-- Giriş yap butonu. -->
+
             </LinearLayout>
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="10dp" />
+                android:layout_height="10dp"/>
+            <!-- Boşluk eklemek için kullanılan View. -->
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="İle Giriş Yap"
                 android:layout_gravity="center"
                 android:alpha="0.7"/>
+            <!-- Alternatif giriş seçeneğini belirten metin. -->
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center">
+                <!-- Alternatif giriş butonlarını yatay hizalayan LinearLayout. -->
 
                 <ImageView
+                    android:id="@+id/google_sign_in_button"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_margin="12dp"
-                    android:background="@drawable/google_icon"
-                    android:id="@+id/google_sign_in_button"/>
+                    android:background="@drawable/google_icon"/>
+                <!-- Google ile giriş yapma butonu. -->
 
             </LinearLayout>
 
         </LinearLayout>
+
 
     </androidx.cardview.widget.CardView>
 

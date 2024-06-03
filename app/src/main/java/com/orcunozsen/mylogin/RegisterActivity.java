@@ -1,7 +1,11 @@
 package com.orcunozsen.mylogin;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,32 +28,35 @@ public class RegisterActivity extends AppCompatActivity {
         etConfirmPassword = findViewById(R.id.et_confirm_password);
         btnRegister = findViewById(R.id.btn_register);
 
-        btnRegister.setOnClickListener(v -> {
-            String name = etName.getText().toString().trim();
-            String email = etEmail.getText().toString().trim();
-            String password = etPassword.getText().toString().trim();
-            String confirmPassword = etConfirmPassword.getText().toString().trim();
-
-            if (isValidName(name) && isValidEmail(email) && isValidPassword(password)) {
-                if (password.equals(confirmPassword)) {
-                    // Kayıt işlemi burada yapılacak
-                    Toast.makeText(RegisterActivity.this, "Kayıt başarılı", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(RegisterActivity.this, "Şifreler uyuşmuyor", Toast.LENGTH_SHORT).show();
-                }
-            } else {
-                if (name.isEmpty()) {
-                    etName.setError("Ad ve soyad girin");
-                }
-                if (!isValidEmail(email)) {
-                    etEmail.setError("Geçerli bir e-posta adresi girin (örneğin: example@example.com)");
-                }
-                if (!isValidPassword(password)) {
-                    etPassword.setError("Güvenli bir şifre girin (en az 8 karakter)");
-                }
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                registerUser();
             }
         });
     }
+        private void registerUser() {
+            String name = etName.getText().toString();
+            String email = etEmail.getText().toString();
+            String password = etPassword.getText().toString();
+            String confirmPassword = etConfirmPassword.getText().toString();
+
+            if (password.equals(confirmPassword)) {
+                SharedPreferences preferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("name", name);
+                editor.putString("email", email);
+                editor.putString("password", password);
+                editor.apply();
+
+                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            } else {
+                etConfirmPassword.setError("Passwords do not match");
+            }
+        }
+
 
     private boolean isValidName(String name) {
         return !name.isEmpty();

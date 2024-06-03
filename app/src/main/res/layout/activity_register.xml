@@ -50,6 +50,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="28dp">
+            <!-- Tüm içeriği dikey olarak hizalayan bir LinearLayout. -->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -58,16 +59,19 @@
                 android:textColor="@color/my_primary"
                 android:textSize="32sp"
                 android:textStyle="bold" />
+            <!-- Kullanıcıya sayfanın amacını belirten başlık. -->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lütfen bilgilerinizi giriniz"
                 android:alpha="0.7" />
+            <!-- Kullanıcıya bilgi girmesini isteyen açıklama metni. -->
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="30dp" />
+            <!-- Boşluk eklemek için kullanılan View. -->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -75,16 +79,19 @@
                 android:text="Ad Soyad Giriniz"
                 android:alpha="0.7"
                 android:textStyle="bold" />
+            <!-- Ad soyad girmesini isteyen açıklama metni. -->
 
             <EditText
                 android:id="@+id/et_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName" />
+            <!-- Kullanıcıdan ad soyad almak için EditText. -->
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="20dp" />
+            <!-- Boşluk eklemek için kullanılan View. -->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -92,16 +99,19 @@
                 android:text="Email Adresi Giriniz"
                 android:alpha="0.7"
                 android:textStyle="bold" />
+            <!-- Email adresi girmesini isteyen açıklama metni. -->
 
             <EditText
                 android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress" />
+            <!-- Kullanıcıdan email almak için EditText. -->
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="20dp" />
+            <!-- Boşluk eklemek için kullanılan View. -->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -109,16 +119,19 @@
                 android:text="Şifrenizi Giriniz"
                 android:alpha="0.7"
                 android:textStyle="bold" />
+            <!-- Şifre girmesini isteyen açıklama metni. -->
 
             <EditText
                 android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword" />
+            <!-- Kullanıcıdan şifre almak için EditText. -->
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="20dp" />
+            <!-- Boşluk eklemek için kullanılan View. -->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -126,22 +139,26 @@
                 android:text="Şifrenizi Tekrar Giriniz"
                 android:alpha="0.7"
                 android:textStyle="bold" />
+            <!-- Şifrenin tekrarını girmesini isteyen açıklama metni. -->
 
             <EditText
                 android:id="@+id/et_confirm_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword" />
+            <!-- Kullanıcıdan şifrenin tekrarını almak için EditText. -->
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="20dp" />
+            <!-- Boşluk eklemek için kullanılan View. -->
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center">
+                <!-- Kayıt ol butonunu yatay hizalayan LinearLayout. -->
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_register"
@@ -151,11 +168,14 @@
                     android:text="Kayıt Ol"
                     app:cornerRadius="32dp"
                     android:layout_marginStart="5dp" />
+                <!-- Kayıt ol butonu. -->
+
             </LinearLayout>
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="10dp" />
+            <!-- Boşluk eklemek için kullanılan View. -->
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
