@@ -8,3 +8,6 @@
 
 ![Ekran Görüntüsü (172)](https://github.com/elifsh/travel_application/assets/119665603/3563b592-48b7-4e1b-91ee-e08d1104d3ce)
 
+![Ekran Görüntüsü (174)](https://github.com/elifsh/travel_application/assets/119665603/e2c7ef76-1a3c-4d6c-8339-75ec583d1ee3)
+
+
