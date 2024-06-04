@@ -10,4 +10,6 @@
 
 ![Ekran Görüntüsü (174)](https://github.com/elifsh/travel_application/assets/119665603/e2c7ef76-1a3c-4d6c-8339-75ec583d1ee3)
 
+![Ekran Görüntüsü (175)](https://github.com/elifsh/travel_application/assets/119665603/e4c864de-e3a0-40fe-b682-0e928e29143d)
+
 
